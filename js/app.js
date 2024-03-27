@@ -22,7 +22,9 @@ createApp({
     },
     checkCondition(x){
         x.done = !x.done
-       
+    },
+    deleteTodo(i){
+        this.todos.splice(i, 1)
     }
 
 }
