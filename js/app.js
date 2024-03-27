@@ -5,8 +5,7 @@ createApp({
     return {
     todos: [],
     imputValue: '', 
-    isDone: false
-     }
+    }
   },
   methods: {
 
@@ -14,15 +13,17 @@ createApp({
         if(this.imputValue !== ''){
             const todo = {
                 text: this.imputValue,
-                done: this.isDone
+                done: false
             }
             this.todos.push(todo)
             console.log(this.todos)
             this.imputValue = ''
         }
     },
-    checkCondition(){
-        this.isDone = !this.isDone
+    checkCondition(x){
+        x.done = !x.done
+       
     }
+
 }
 }).mount('#app')
